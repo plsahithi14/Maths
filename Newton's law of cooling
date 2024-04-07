@@ -1,0 +1,12 @@
+import math
+Ta = 20  
+Ti = 100  
+Tf = 80  
+td = 10  
+# k = -1 / (td * ln((Tf - Ta) / (Ti - Ta)))
+k = -1 / (td * math.log((Tf - Ta) / (Ti - Ta)))
+def tempt(t):
+    return Ta + (Ti - Ta) * math.exp(-k * t)
+temp_20_min = tempt(20)
+print(f"The temperature after 20 minutes: {temp_20_min:.2f}°C")
+print(f"The time when the temperature will be 40°C: {time_40:.2f} minutes")
